@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
-import { IonModal, IonicModule } from '@ionic/angular';
+import { IonicModule } from '@ionic/angular';
+
 
 
 @NgModule({
   declarations: [
-  HeaderComponent
+    HeaderComponent
   ],
-  exports: [
-  HeaderComponent
+  exports:[
+    HeaderComponent
   ],
   imports: [
-  CommonModule,
-  IonicModule
+    CommonModule,
+    IonicModule
   ]
-  })
-  
+})
 export class ComponentsModule { }

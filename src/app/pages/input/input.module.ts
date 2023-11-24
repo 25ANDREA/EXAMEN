@@ -9,7 +9,6 @@ import { InputPageRoutingModule } from './input-routing.module';
 import { InputPage } from './input.page';
 import { ComponentsModule } from 'src/app/components/components.module';
 
-
 @NgModule({
   imports: [
     CommonModule,

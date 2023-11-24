@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Componente } from './interfaces/interfaces';
-import { DataService } from './services/data.service';
 import { Observable } from 'rxjs';
+import { Componente } from './interfaces/componente';
+import { DataService } from './services/data.service';
 
 @Component({
   selector: 'app-root',
@@ -9,16 +9,15 @@ import { Observable } from 'rxjs';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  componentes!: Observable<Componente[]>;
+  componentes: Observable<Componente[]> | undefined;
 
-  ngOnInit() {
-    this.componentes = this.dataService.getMenuOpts();
+  ngOnInit(){
+    this.componentes = this.dataservice.getMenuOpts();
   }
-  constructor(private dataService: DataService) { 
+  constructor(private dataservice: DataService) {
 
   }
-  initializeApp() {
-    this.componentes = this.dataService.getMenuOpts();
-  }  
-
+  initializeApp(){
+    this.componentes = this.dataservice.getMenuOpts();
+  }
 }
